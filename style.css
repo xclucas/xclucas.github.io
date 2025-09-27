@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+/* ==== Color Theme ==== */
+:root {
+  --off-black: #161512;
+  --off-white: #cfcabb;
+  --gray: #c0bbb6;
+  --nav-bg: #171718;
+  --section-border: #28282a;
+  --blue: #3b82f6;
+  --shadow: 0 4px 12px rgba(0,0,0,0.28);
+}
+
+/* ==== Reset and Body ==== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--off-black);
+  color: var(--gray);
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #539bfa;
+  text-decoration: none;
+  transition: color 0.10s;
+  
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+a:hover {
+  color: #307ee4;
+}
+
+.content-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 16px 16px;
+}
+
+/* ==== Bio Section ==== */
+.bio-section {
+    margin-bottom: 1rem;
+}
+
+.bio-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.bio-image {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 3px solid var(--section-border);
+  background: #18181a;
+}
+.bio-text h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5em 0;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.bio-text p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* ==== Navbar ==== */
+.title-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3rem 0;
+  background: var(--off-black);
+  border-bottom: none;
+  transition: background 0.2s, border-bottom 0.2s;
+}
+
+.navigation-links {
+  display: flex;
+  gap: 2.7rem;
+}
+
+.title-bar .navigation-links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  padding: 0 2px;
+  color: #b0afae
+}
+
+.navigation-links a:hover,
+.navigation-links a:focus {
+  color: var(--off-white);
+}
+
+/* ==== Section Separators ==== */
+.main-content section {
+  border-bottom: 2px solid var(--section-border);
+  border-top: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 2.1rem 0 1.7rem 0;
+  background: none;
+  box-shadow: none;
+}
+.main-content section:first-of-type {
+  border-top: none;
+}
+.main-content h2 {
+  font-size: 2.0rem;
+  margin: 0 0 3rem 0;
+  font-weight: 500;
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  color: var(--off-white);
+}
+
+/* ==== Lists and Body Links ==== */
+ul {
+  padding-left: 1.3em;
+  margin-top: 0.2em;
+}
+li {
+  margin-bottom: 1.1em;
+  font-size: 1.2rem;
+}
+li b {
+    font-weight: 600;
+}
+
+/* ==== Publications ==== */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  margin-top: 1.4rem;
+}
+.pub-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.pub-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background: #161617;
+  border: 2px solid var(--section-border);
+  flex-shrink: 0;
+}
+.pub-text {
+  flex: 1;
+  display: inline;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.2em;
+}
+.pub-text i {
+  font-weight: 700;
+  color: white;
+  font-style: normal;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 700px) {
+  .content-wrapper {
+    padding: 8px 2vw;
+  }
+  .bio-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .main-content section {
+    padding: 1.2rem 0 0.9rem 0;
+  }
+  .navigation-links {
+    gap: 1.1rem;
+  }
+  .bio-image {
+    width: 110px;
+  }
+}
