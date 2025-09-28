@@ -6,155 +6,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="content-wrapper">
     
-    <div style="height: 13rem;"></div>
-    
-    <section class="bio-section" id="bio">
-      <div class="bio-container">
-        <img src="https://placehold.co/160x160?text=Photo" class="bio-image" alt="Profile photo of Lucas Chen">
-        <div class="bio-text">
-          <h1>Lucas Chen</h1>
-          <p>
-                For a while, I walked through the hills and towns of Man, neither borne in their
-                festivities nor caught in their strife. I never stayed long but was not blessed with knowing a destination. 
-                Though the weariness in my sole reminded me that such travels must eventually draw to a close, 
-                I couldn't accept returning to the flatside with its endless waves of oblivion. I feared 
-                that most of all, from the core of my existence. So I wandered on, through the night and the day, through the seasons, 
-                    through the years.
-            <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">[linkedin]</a>
-            <a href="https://github.com/reschivon" target="_blank">[github]</a>
-            <a href="mailto:chen4007@Purdue.edu" target="_blank">[email]</a>
-          </p>
+  <div style="height: 13rem;"></div>
+  
+  <section class="bio-section" id="bio">
+    <img src="https://placehold.co/160x160?text=Photo" class="bio-image" alt="Profile photo of Lucas Chen">
+    <div class="bio-text">
+      <h1>Lucas Chen</h1>
+      <p>
+            For a while, I walked through the fields and towns of Man. I was neither borne in their
+            festivities nor caught in their strife. Not able to stay in any one place, I had no blessing of a destination either. 
+            Though the weariness in my sole reminded me that such travels could not continue forever, 
+            I couldn't accept returning to the flatside with its endless waves of oblivion and eternal dead sun. I feared that
+            from the core of my existence. So I wandered on, through the night and the day, through the seasons, 
+            through the years.
+        <br>
+        <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">[linkedin]</a>
+        <a href="https://github.com/reschivon" target="_blank">[github]</a>
+        <a href="mailto:chen4007@Purdue.edu" target="_blank">[email]</a>
+      </p>
+    </div>
+  </section>
+  
+  <div style="height: 2rem;"></div>
+  
+  <!-- This stays after the bio -->
+  <header id="main-header" class="title-bar">
+    <nav class="navigation-links">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  
+  </header>
+
+  <div style="height: 5rem;"></div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>
+        <b>Research Assistant</b> | CoMMA Lab | Aug 2024 - Present<br>
+        Research on computer vision, RL, and motion planning for deformable robots
+      </li>
+      <li>
+        <b>Undergraduate Research Assistant</b> | CoRAL Lab | Oct 2021 - Feb 2025<br>
+      </li>
+      <li>
+        <b>University Contractor</b> | Cat Autonomy & Automation | Feb 2025 - Present<br>
+        - Primary developer of a greenfield project for autonomous excavator planning and control<br>
+        - Patent #<br>
+        - Translate project requirements into technical specifications, communicate with stakeholders, and manage project timeline<br>
+      </li>
+      <li>
+        <b>Robotics Software Intern</b> | Dusty Robotics | May 2023 - Aug 2024<br>
+        - Researching methods for dynamic segmentation of print geometries from BIM layout, with the goal of automating operator actions for the Markbot<br>
+        - Development and testing of an in-house development tool for visualizing and analysing concurrent robot data<br>
+        - Implement navigation heuristics for faster probabilistic search over a space with dynamic obstacles
+      <li>
+        <b>Software Lead</b> | Autonomous Motorsports Purdue | Sep 2021 - Dec 2023<br>
+        - ROS based software stack running on Jetson Xavier<br>
+        - Software challenges involve sensor fusion with LiDAR and stereo cameras, custom markers embedded in SLAM graph, pointcloud filtering, and optimizing raceline generation
+      </li>
+      <li>
+        <b>Robotics Intern</b> | Redwire Space | Apr 2022 - Aug 2022<br>
+        - Develop oscillation-reducing trajectory generation for robot arm and test on physical EDU unit<br>
+        - Implement Behavior Tree for task execution and fault recovery of robot arm during unstow phase, including pipeline for streaming state to ground station<br>
+        - Construct Go Bus passthrough server for sending/receiving controls to remote arm via CCSDS
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <b>MS - Computer Science</b> | Purdue University | Jan 2024 - Dec 2025
+      </li>
+      <li>
+        <b>BS - Computer Science</b> | Purdue University | Aug 2021 - Jun 2025
+      </li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="pub-list">
+        
+      <div class="pub-item">
+        <img src="https://placehold.co/120x120?text=Fig3" class="pub-img" alt="Publication thumbnail">
+        <div class="pub-text">
+            <b>Differentiable Particle Optimization for Fast Sequential Manipulation</b>
+            <br>
+            <i>Lucas Chen</i>, Shrutheesh R. Iyer, Zachary Kingston
+            <br>
+            ICRA 2026 (submitted)
         </div>
       </div>
-    </section>
-    
-    <div style="height: 2rem;"></div>
-    
-    <!-- This stays after the bio -->
-    <header id="main-header" class="title-bar">
-      <nav class="navigation-links">
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-      </nav>
-    
-    </header>
-
-    <div style="height: 5rem;"></div>
-
-    <main class="main-content">
-      <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-          <li>
-            <b>Research Assistant</b>, CoMMA Lab, Aug 2024 - Present<br>
-            Research on computer vision, RL, and motion planning for deformable robots.
-          </li>
-          <li>
-            <b>Undergraduate Research Assistant</b>, CoRAL Lab, Oct 2021 - Feb 2025<br>
-          </li>
-          <li>
-            <b>Robotics Software Intern</b>, Dusty Robotics, May 2023 - Aug 2024<br>
-            - Researching methods for dynamic segmentation of print geometries from BIM layout, with the goal of automating operator actions for the Markbot.<br>
-            - Development and testing of an in-house development tool for visualizing and analysing concurrent robot data.<br>
-            - Implement navigation heuristics for faster probabilistic search over a space with dynamic obstacles
-          </li>
-          <li>
-            <b>Software Lead</b>, Autonomous Motorsports Purdue, Sep 2021 - Dec 2023<br>
-            - ROS based software stack running on Jetson Xavier<br>
-            - Software challenges involve sensor fusion with LiDAR and stereo cameras, custom markers embedded in SLAM graph, pointcloud filtering, and optimizing raceline generation.
-          </li>
-          <li>
-            <b>Robotics Intern</b>, Redwire Space, Apr 2022 - Aug 2022<br>
-            - Develop oscillation-reducing trajectory generation for robot arm and test on physical EDU unit.<br>
-            - Implement Behavior Tree for task execution and fault recovery of robot arm during unstow phase, including pipeline for streaming state to ground station.<br>
-            - Construct Go Bus passthrough server for sending/receiving controls to remote arm via CCSDS
-          </li>
-        </ul>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            MS, Purdue University, Jan 2024 - Dec 2025
-          </li>
-          <li>
-            BS, Computer Science, Purdue University, Aug 2021 - Jun 2025
-          </li>
-        </ul>
-      </section>
-
-      <section id="publications">
-        <h2>Publications</h2>
-        <div class="pub-list">
-            
-          <div class="pub-item">
-            <img src="https://placehold.co/120x120?text=Fig3" class="pub-img" alt="Publication thumbnail">
-            <div class="pub-text">
-                <b>Differentiable Particle Optimization for Fast Sequential Manipulation</b>
-                <br>
-                <i>Lucas Chen</i>, Shrutheesh R. Iyer, Zachary Kingston
-                <br>
-                ICRA 2026 (submitted)
-            </div>
-          </div>
-          
-          <div class="pub-item">
-            <img src="https://placehold.co/120x120?text=Fig1" class="pub-img" alt="Publication thumbnail">
-            <div class="pub-text">
-                <b>Parallel Simulation of Contact and Actuation for Soft Growing Robots</b>
-                <br>
-                Yitian Gao, <i>Lucas Chen</i>, Priyanka Bhovad, Sicheng Wang, Zachary Kingston, Laura H. Blumenschein
-                <br>
-                SoRo 2026 (submitted)
-                <!-- <br> -->
-                <a href="https://arxiv.org/abs/2501.17963" target="_blank">[arXiv]</a>
-                <a href="https://github.com/CoMMALab/ActVineSimPy" target="_blank">[github]</a>
-            </div>
-          </div>
-          
-          <div class="pub-item">
-            <img src="https://placehold.co/120x120?text=Fig1" class="pub-img" alt="Publication thumbnail">
-            <div class="pub-text">
-
-                <b>Physics-Grounded Differentiable Simulation for Soft Growing Robots</b>
-                <br>
-                <i>Lucas Chen</i>, Yitian Gao, Sicheng Wang, Francesco Fuentes, Laura H. Blumenschein, Zachary Kingston
-                <br>
-                RoboSoft 2025
-                <!-- <br> -->
-                <a href="https://ieeexplore.ieee.org/document/11020809/" target="_blank">[IEEE]</a>
-                <a href="https://github.com/CoMMALab/DiffVineSimPy" target="_blank">[github]</a>
-            </div>
-          </div>
-          
-          <div class="pub-item">
-            <img src="https://placehold.co/120x120?text=Fig2" class="pub-img" alt="Publication thumbnail">
-            <div class="pub-text">
-                <b>Efficient Q-Learning over Visit Frequency Maps for Multi-Agent Exploration of Unknown Environments</b>
-                <br>
-                <i>Lucas Chen</i>, Ashvin N. Iyer, Zixing Wang, Ahmed H. Qureshi
-                <br>
-                IROS 2023
-                <!-- <br> -->
-                <a href="https://ieeexplore.ieee.org/document/10341899/" target="_blank">[IEEE]</a>
-                <a href="https://github.com/corallab-base/Integrated-Visit-Frequency-Maps" target="_blank">[github]</a>
-            </div>
-          </div>
-          
-          
+      
+      <div class="pub-item">
+        <img src="https://placehold.co/120x120?text=Fig1" class="pub-img" alt="Publication thumbnail">
+        <div class="pub-text">
+            <b>Parallel Simulation of Contact and Actuation for Soft Growing Robots</b>
+            <br>
+            Yitian Gao, <i>Lucas Chen</i>, Priyanka Bhovad, Sicheng Wang, Zachary Kingston, Laura H. Blumenschein
+            <br>
+            SoRo 2026 (submitted)
+            <!-- <br> -->
+            <a href="https://arxiv.org/abs/2501.17963" target="_blank">[paper]</a>
+            <a href="https://github.com/CoMMALab/ActVineSimPy" target="_blank">[github]</a>
         </div>
-      </section>
-    </main>
-    
-    <div style="height: 10rem;"></div>
+      </div>
+      
+      <div class="pub-item">
+        <img src="https://placehold.co/120x120?text=Fig1" class="pub-img" alt="Publication thumbnail">
+        <div class="pub-text">
 
-  </div>
+            <b>Physics-Grounded Differentiable Simulation for Soft Growing Robots</b>
+            <br>
+            <i>Lucas Chen</i>, Yitian Gao, Sicheng Wang, Francesco Fuentes, Laura H. Blumenschein, Zachary Kingston
+            <br>
+            RoboSoft 2025
+            <!-- <br> -->
+            <a href="https://ieeexplore.ieee.org/document/11020809/" target="_blank">[paper]</a>
+            <a href="https://github.com/CoMMALab/DiffVineSimPy" target="_blank">[github]</a>
+            <a href="assets/Robosoft poster new-3.pdf" target="_blank">[poster]</a>
+            <a href="assets/robosoft slides.pptx" target="_blank">[slides]</a>
+        </div>
+      </div>
+      
+      <div class="pub-item">
+        <img src="https://placehold.co/120x120?text=Fig2" class="pub-img" alt="Publication thumbnail">
+        <div class="pub-text">
+            <b>Efficient Q-Learning over Visit Frequency Maps for Multi-Agent Exploration of Unknown Environments</b>
+            <br>
+            <i>Lucas Chen</i>, Ashvin N. Iyer, Zixing Wang, Ahmed H. Qureshi
+            <br>
+            IROS 2023
+            <!-- <br> -->
+            <a href="https://ieeexplore.ieee.org/document/10341899/" target="_blank">[paper]</a>
+            <a href="https://github.com/corallab-base/Integrated-Visit-Frequency-Maps" target="_blank">[github]</a>
+            <a href="assets/IROS Poster i-VFM.pdf" target="_blank">[poster]</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="pub-list">
+      
+      <div class="pub-item">
+        <div class="pub-text">
+            <b>movForth</b>
+            <br>
+            Compile stack machine operations from the Forth language to LLVM IR via static graph analysis
+            <br>
+            <a href="https://github.com/Reschivon/movForth" target="_blank">[github]</a>
+            <a href="https://youtu.be/CgxwbeLWSZM?t=9963" target="_blank">[talk]</a>
+        </div>
+        <img src="https://placehold.co/120x120?text=Fig4" class="pub-img" alt="Project thumbnail">
+      </div>
+      
+      <div class="pub-item">
+        <div class="pub-text">
+            <b>Learning Rearrangement from Brownian Motion</b>
+            <br>
+            CS 592 Reinforcement Learning - Generate diverse new trajectories by diffusing in task-space,
+            even with obstacles and self-collisions.
+            <br>
+            <a href="assets/Posta.pdf" target="_blank">[poster]</a>
+            
+        </div>
+        <img src="assets/trajs.jpg" class="pub-img" alt="Project thumbnail">
+      </div>
+      
+      <div class="pub-item">
+        <div class="pub-text">
+            <b>Neural Time Fields as Metric Learning</b>
+            <br>
+            We can embed free space points in a higher dimensional manifold where the L2 distance is 
+            the shortest non-colliding path.
+            <br>
+            
+        </div>
+        <img src="assets/manifold_smooth_vis.png" class="pub-img" alt="Project thumbnail">
+      </div>
+        
+  </section>
+
+
+  <div style="height: 10rem;"></div>
+
 </body>
 </html>

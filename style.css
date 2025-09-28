@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
 
 /* ==== Color Theme ==== */
 :root {
   --off-black: #161512;
-  --off-white: #cfcabb;
-  --gray: #c0bbb6;
-  --nav-bg: #171718;
-  --section-border: #28282a;
-  --blue: #3b82f6;
-  --shadow: 0 4px 12px rgba(0,0,0,0.28);
+  --off-white: #f3ede0;
+  --gray: #d7cdc0;
+  --section-border: #31302c;
+  --blue: #539bfa;
+  --dark-blue: #307ee4;
+  --red: rgb(244, 87, 20);
 }
 
 /* ==== Reset and Body ==== */
@@ -17,62 +16,51 @@ html, body {
   padding: 0;
   background: var(--off-black);
   color: var(--gray);
-  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 400;
   /* font-size: 0.9em; */
   font-size: 0.4cm;
   scroll-behavior: smooth;
+  line-height: 0.67cm;
 }
 
 a {
-  color: #539bfa;
+  color: var(--blue);
   text-decoration: none;
-  transition: color 0.10s;
   
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'IBM Plex Mono', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
 }
 a:hover {
-  color: #307ee4;
-}
-
-.content-wrapper {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 16px 16px 16px;
+  color: var(--dark-blue);
 }
 
 /* ==== Bio Section ==== */
 .bio-section {
-    margin-bottom: 1rem;
-}
-
-.bio-container {
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 64px;
+  border-bottom: none;
 }
 .bio-image {
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border: 3px solid var(--section-border);
-  background: #18181a;
+  flex-basis: 33%;
 }
+.bio-text {
+  flex: 1;
+}
+
 .bio-text h1 {
   font-size: 3.5rem;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.6em 0;
   font-weight: 700;
-  /* font-family: 'Roboto', Arial, sans-serif; */
-  /* letter-spacing: 0.1em; */
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
 }
 .bio-text p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: 1.2rem;
 }
 
 /* ==== Navbar ==== */
@@ -86,7 +74,7 @@ a:hover {
   padding: 1.3rem 0;
   background: var(--off-black);
   border-bottom: none;
-  transition: background 0.2s, border-bottom 0.2s;
+
 }
 
 .navigation-links {
@@ -99,9 +87,8 @@ a:hover {
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 0.01em;
-  transition: color 0.2s;
-  padding: 0 2px;
-  color: #b0afae
+  padding: 0.5rem;
+  color: var(--gray);
 }
 
 .navigation-links a:hover,
@@ -110,41 +97,55 @@ a:hover {
 }
 
 /* ==== Section Separators ==== */
-.main-content section {
+section {
   border-bottom: 2px solid var(--section-border);
-  border-top: none;
-  border-radius: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 2.1rem 0 1.7rem 0;
-  background: none;
-  box-shadow: none;
+
+  /* top right bottom left */
+  padding: 2.0rem 25px 2.0rem 30px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
-.main-content section:first-of-type {
+
+#experience {
+  max-width: 660px;
+  padding-right: 60px;
+}
+
+section:first-of-type {
   border-top: none;
 }
-.main-content h2 {
+
+h2 {
   font-size: 2.0rem;
   margin: 0 0 3rem 0;
   font-weight: 500;
-  font-family: 'Roboto Mono', Arial, sans-serif;
-  color: var(--off-white);
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  letter-spacing: -0.05rem;
 }
 
 /* ==== Lists and Body Links ==== */
 ul {
-  padding-left: 1.3em;
+  padding-left: 1.5em;
   margin-top: 0.2em;
+  /* width: 89%; */
 }
 li {
   margin-bottom: 1.1em;
   font-size: 1.2rem;
+  padding-left: 0.0em;
+  
 }
 li b {
-    font-weight: 600;
+  font-weight: 700;
 }
 
 /* ==== Publications ==== */
+/* #publications .pub-list {
+  width: 800px;
+  
+} */
 .pub-list {
   display: flex;
   flex-direction: column;
@@ -157,13 +158,13 @@ li b {
   gap: 1.6rem;
 }
 .pub-img {
-  width: 120px;
+  width: 200px;
   height: 120px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  background: #161617;
-  border: 2px solid var(--section-border);
-  flex-shrink: 0;
+  object-fit: contain;
+  /* border-radius: 0.5rem; */
+  /* background: #161617; */
+  /* border: 2px solid var(--section-border); */
+  /* flex-shrink: 0; */
 }
 .pub-text {
   flex: 1;
@@ -173,28 +174,52 @@ li b {
   margin-bottom: 0.2em;
 }
 .pub-text i {
-  font-weight: 700;
-  color: white;
+  /* font-weight: 700; */
+  /* color: white; */
+  color:rgb(244, 87, 20);
   font-style: normal;
 }
 
 /* ==== Responsive ==== */
-@media (max-width: 700px) {
-  .content-wrapper {
-    padding: 8px 2vw;
+@media (max-width: 768px) {
+  html {
+    font-size: 0.35cm;
   }
-  .bio-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-  .main-content section {
-    padding: 1.2rem 0 0.9rem 0;
+  
+  .title-bar {
+    position: static;
   }
   .navigation-links {
-    gap: 1.1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
+  
   .bio-image {
-    width: 110px;
+    max-width: 100%;
+    
+  }
+  .bio-section {
+    flex-direction: column;
+  }
+
+  .pub-item {
+    flex-direction: column;
+  }
+  
+  #experience {
+    padding-right: 25px;
+    max-width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  ul {
+    padding-left: 0rem;
   }
 }
