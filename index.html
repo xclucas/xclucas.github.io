@@ -2,33 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Academic Profile - Lucas Chen</title>
+  <title>Lucas Chen - My Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-  <div style="height: 13rem;"></div>
-  
+
+  <div style="height: 9rem;"></div>
+
   <section class="bio-section" id="bio">
-    <img src="https://placehold.co/160x160?text=Photo" class="bio-image" alt="Profile photo of Lucas Chen">
+    <img src="assets/me.jpg" class="bio-image" alt="Profile photo of Lucas Chen">
     <div class="bio-text">
       <h1>Lucas Chen</h1>
       <p>
-            For a while, I walked through the fields and towns of Man. I was neither borne in their
-            festivities nor caught in their strife. Not able to stay in any one place, I had no blessing of a destination either. 
-            Though the weariness in my sole reminded me that such travels could not continue forever, 
-            I couldn't accept returning to the flatside with its endless waves of oblivion and eternal dead sun. I feared that
-            from the core of my existence. So I wandered on, through the night and the day, through the seasons, 
-            through the years.
-        <br>
-        <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">[linkedin]</a>
-        <a href="https://github.com/reschivon" target="_blank">[github]</a>
-        <a href="mailto:chen4007@Purdue.edu" target="_blank">[email]</a>
+          I am a Masters student in the <a href="https://commalab.org/">CoMMA lab</a> 
+          advised by <a href="https://zkingston.com/">Zachary Kingston</a> at <a href="https://www.purdue.edu/">Purdue University</a>.
+          <br><br>
+          My research interests span robotics and vision, including using hardware acceleration to produce enormous speedups (1000x),
+          realtime trajectory optimization, physics informed learning, and motion planning in wacky and unusual situations. 
+          In the past, I have also worked with RL, open language querying, and planning with PDEs.
+          <br><br>
+          I am also interested in how we can make proof-of-concept methods from literature reliable and explainable enough to deploy to commercial robots.
+          <br><br> 
+          <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">[linkedin]</a>
+          <a href="https://github.com/reschivon" target="_blank">[github]</a>
+          <a href="mailto:chen4007@purdue.edu" target="_blank">[email]</a>
       </p>
     </div>
   </section>
@@ -50,45 +54,70 @@
 
   <section id="experience">
     <h2>Experience</h2>
-    <ul>
-      <li>
+    <ul class="exp-list">
+      <li class="exp-item">
         <b>Research Assistant</b> | CoMMA Lab | Aug 2024 - Present<br>
-        Research on computer vision, RL, and motion planning for deformable robots
+        <ul>
+          <li> Work on hardware-accelerated realtime trajectory planning and decision making, and kinodynamic planning
+          for soft robots. See first author <a href="#publications">publications</a></li>
+        </ul>
       </li>
-      <li>
-        <b>Undergraduate Research Assistant</b> | CoRAL Lab | Oct 2021 - Feb 2025<br>
+      
+      <li class="exp-item">
+        <b>Undergraduate Member</b> | CoRAL Lab | Oct 2021 - Feb 2025<br>
+        <ul>
+          <li>Work on multi-agent exploration with RL and planning with PDEs. See first author <a href="#publications">publications</a></li>
+        </ul>
       </li>
-      <li>
+      
+      <li class="exp-item">
         <b>University Contractor</b> | Cat Autonomy & Automation | Feb 2025 - Present<br>
-        - Primary developer of a greenfield project for autonomous excavator planning and control<br>
-        - Patent #<br>
-        - Translate project requirements into technical specifications, communicate with stakeholders, and manage project timeline<br>
+        <ul>
+          <li>Primary developer of a greenfield project for autonomous excavator planning and control</li>
+          <li>Patent #XXXXXX </li>
+          <li>Communicate with stakeholders in weekly meetings, set project timeline, determine technical requirements to 
+          satisfy organizational goals</li>
+        </ul>
       </li>
-      <li>
-        <b>Robotics Software Intern</b> | Dusty Robotics | May 2023 - Aug 2024<br>
-        - Researching methods for dynamic segmentation of print geometries from BIM layout, with the goal of automating operator actions for the Markbot<br>
-        - Development and testing of an in-house development tool for visualizing and analysing concurrent robot data<br>
-        - Implement navigation heuristics for faster probabilistic search over a space with dynamic obstacles
-      <li>
+      
+      <li class="exp-item">
+        <b>Robotics Software Intern</b> | Dusty Robotics | Summers of 2023 and 2024 <br>
+        <ul>
+          <li>Reduced runtime from <b>1.0s to 0.2s</b> for the ML vision model that allows our product to identify and avoid collisions in industrial sites</li>
+          <li>Improve the resolution of obstacle mapping from <b>5cm to 1cm</b> by proposing a classless segmentation pipeline</li>
+          <li>Boosted completion rate <b>130%</b> for large 5000+ waypoint commerical jobs using polynomial-time tree heuristics for the Traveling Salesman Problem</li>
+          <li>Completed a long-awaited refactor of <b>4500+ lines</b> of production code, providing a clean interface for integration of new navigation features</li>
+        </ul>
+      </li>
+      
+      <li class="exp-item">
         <b>Software Lead</b> | Autonomous Motorsports Purdue | Sep 2021 - Dec 2023<br>
-        - ROS based software stack running on Jetson Xavier<br>
-        - Software challenges involve sensor fusion with LiDAR and stereo cameras, custom markers embedded in SLAM graph, pointcloud filtering, and optimizing raceline generation
+        <ul>
+          <li>Led software team to take <b>2nd place</b> in the 2023 national <i>Autonomous Karting Series</i> through a semester of development and race-day adaptations</li>
+          <li>Make real-time visual SLAM feasible on our small Jetson Xavier computer by writing custom SLAM nodes tailored for cones and cone pose graphs</li>
+          <li>Shaved lidar traffic cone detection time to 0.1s using GPU PCL operations, freeing up critical compute time</li>
+        </ul>
       </li>
-      <li>
+      
+      <li class="exp-item">
         <b>Robotics Intern</b> | Redwire Space | Apr 2022 - Aug 2022<br>
-        - Develop oscillation-reducing trajectory generation for robot arm and test on physical EDU unit<br>
-        - Implement Behavior Tree for task execution and fault recovery of robot arm during unstow phase, including pipeline for streaming state to ground station<br>
-        - Construct Go Bus passthrough server for sending/receiving controls to remote arm via CCSDS
+        <ul>
+          <li>Verification of trust region for in-orbit AprilTag tracking camera, used to ensure alignment during critical unstow phase</li>
+          <li>Conducted ground testing of the space-bound 7 DOF arm, building out fault recovery tree and protocol communicating fault status</li>
+          <li>Implemented trajectory controller for the arm on a radiation-hardened FreeRTOS microcontroller to minimize oscillations during LEO motions</li>
+        </ul>
+      </li>
+      
     </ul>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <ul>
-      <li>
+    <ul class="exp-list">
+      <li class="exp-item">
         <b>MS - Computer Science</b> | Purdue University | Jan 2024 - Dec 2025
       </li>
-      <li>
+      <li class="exp-item">
         <b>BS - Computer Science</b> | Purdue University | Aug 2021 - Jun 2025
       </li>
     </ul>
@@ -105,7 +134,7 @@
             <br>
             <i>Lucas Chen</i>, Shrutheesh R. Iyer, Zachary Kingston
             <br>
-            ICRA 2026 (submitted)
+            ICRA 2026 (in review)
         </div>
       </div>
       
@@ -116,7 +145,7 @@
             <br>
             Yitian Gao, <i>Lucas Chen</i>, Priyanka Bhovad, Sicheng Wang, Zachary Kingston, Laura H. Blumenschein
             <br>
-            SoRo 2026 (submitted)
+            SoRo 2026 (in review)
             <!-- <br> -->
             <a href="https://arxiv.org/abs/2501.17963" target="_blank">[paper]</a>
             <a href="https://github.com/CoMMALab/ActVineSimPy" target="_blank">[github]</a>
@@ -191,8 +220,8 @@
         <div class="pub-text">
             <b>Neural Time Fields as Metric Learning</b>
             <br>
-            We can embed free space points in a higher dimensional manifold where the L2 distance is 
-            the shortest non-colliding path.
+            We learn a special higher dimensional manifold where the L2 distance happens to be
+            to be the shortest geodesic path.
             <br>
             
         </div>
@@ -203,6 +232,17 @@
 
 
   <div style="height: 10rem;"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.querySelector('#main-header');
+      window.addEventListener("scroll", () => {
+          const stickyTop = parseInt(window.getComputedStyle(el).top);
+          const currentTop = el.getBoundingClientRect().top;
+          el.classList.toggle("stuck", currentTop === stickyTop);
+      });
+    });
+  </script>
 
 </body>
 </html>
