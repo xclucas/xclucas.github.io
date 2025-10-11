@@ -85,18 +85,47 @@ a:hover {
   font-size: 1.2rem;
 }
 
+#education::after {
+  content: '';
+  position: absolute;
+  top: 1780px;
+  width: 350px;
+  
+  
+  height: 400px;
+  left: 70%;
+  transform: translateX(-50%);
+  
+  background-image: url('assets/fun2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 102;
+  pointer-events:none;
+  filter: invert(0.9);
+  
+  transform: translateX(-50%) scaleX(-1);
+}
 /* ==== Navbar ==== */
 .title-bar {
   position: sticky;
   top: 0;
   z-index: 101;
+  padding: 1.0rem;
+  
+  /* stuff inside centered */
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  padding: 1.0rem 0;
+
+
   background: var(--off-black);
-  border-bottom: 2px solid transparent;/
+  border-bottom: 2px solid transparent;
+}
+
+.title-bar.stuck {
+  border-bottom-color: var(--section-border);
+  z-index: 103;
 }
 
 .background {
@@ -112,13 +141,11 @@ a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
-  z-index: 10000;
+  z-index: 102;
+  pointer-events:none;
   filter: invert(0.9);
 }
 
-.title-bar.stuck {
-  border-bottom-color: var(--section-border);
-}
 
 .navigation-links {
   display: flex;
