@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,18 +22,21 @@
     <div class="bio-text">
       <h1>Lucas Chen</h1>
       <p>
-          I am a Masters student in the <a href="https://commalab.org/">CoMMA lab</a> 
-          advised by <a href="https://zkingston.com/">Zachary Kingston</a> at <a href="https://www.purdue.edu/">Purdue University</a>.
+          I am a Masters student in the <a href="https://commalab.org/">CoMMA lab</a> at <a href="https://www.purdue.edu/">Purdue University</a>,
+          advised by <a href="https://zkingston.com/">Zachary Kingston</a>. I am working on learning-based motion planning and trajectory optimization for realtime (millisecond!) planning.
           <br><br>
-          My research interests span robotics and vision, including using hardware acceleration to produce enormous speedups (1000x) over conventional variants,
+          My research interests span robotics and vision, including using hardware acceleration to produce enormous speedups (1000x) over conventional variants,  
           realtime trajectory optimization, physics informed learning, and motion planning in wacky and unusual situations. 
           In the past, I have also worked with RL, open language querying, and planning with PDEs.
           <br><br>
           I am also interested in how we can make proof-of-concept methods from literature reliable and explainable enough to deploy to commercial robots.
           <br><br> 
-          <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">[linkedin]</a>
-          <a href="https://github.com/reschivon" target="_blank">[github]</a>
-          <a href="mailto:chen4007@purdue.edu" target="_blank">[email]</a>
+          
+          <div style="text-align: center;">
+            <a href="mailto:chen4007@purdue.edu" target="_blank">Email</a> &nbsp; | &nbsp;
+            <a href="https://github.com/reschivon" target="_blank">Github</a> &nbsp; | &nbsp;
+            <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">Linkedin</a>
+          </div>
       </p>
     </div>
   </section>
@@ -52,7 +56,7 @@
 
   <div style="height: 5rem;"></div>
 
-  <section id="experience">
+  <section id="experience" class="narrow">
     <h2>Experience</h2>
     <ul class="exp-list">
       <li class="exp-item">
@@ -71,7 +75,7 @@
       </li>
       
       <li class="exp-item">
-        <b>University Contractor</b> | Cat Autonomy & Automation | Feb 2025 - Present<br>
+        <b>University Contractor</b> | Caterpillar Autonomy & Automation | Feb 2025 - Present<br>
         <ul>
           <li>Primary developer of a greenfield project for autonomous excavator planning and control</li>
           <li>Patent #XXXXXX </li>
@@ -86,7 +90,7 @@
           <li>Reduced runtime from <b>1.0s to 0.2s</b> for the ML vision model that allows our product to identify and avoid collisions in industrial sites</li>
           <li>Improve the resolution of obstacle mapping from <b>5cm to 1cm</b> by proposing a classless segmentation pipeline</li>
           <li>Boosted completion rate <b>130%</b> for large 5000+ waypoint commerical jobs using polynomial-time tree heuristics for the Traveling Salesman Problem</li>
-          <li>Completed a long-sought refactor of <b>4500+ lines</b> of production code, providing a clean interface for integration of new navigation features</li>
+          <!-- <li>Completed a long-sought refactor of <b>4500+ lines</b> of production code, providing a clean interface for integration of new navigation features</li> -->
         </ul>
       </li>
       
@@ -128,59 +132,70 @@
     <div class="pub-list">
         
       <div class="pub-item">
-        <img src="https://placehold.co/120x120?text=Fig3" class="pub-img" alt="Publication thumbnail">
+        <!-- <img src="assets/spasm.png" class="pub-img" alt="Publication thumbnail"> -->
+        
+        <video id="teaser" autoplay muted loop playsinline class="pub-vid">
+          <source src="./assets/hero.webm"
+                  type="video/mp4">
+        </video>
+      
         <div class="pub-text">
             <b>Differentiable Particle Optimization for Fast Sequential Manipulation</b>
             <br>
             <i>Lucas Chen</i>, Shrutheesh R. Iyer, Zachary Kingston
-            <br>
+            <br><br>
             ICRA 2026 (in review)
+            <br>
+            <a href="http://arxiv.org/abs/2510.07674" target="_blank">paper</a> |
+            <a href="https://github.com/CoMMALab/SPaSM" target="_blank">github</a> |
+            <a href="https://www.youtube.com/watch?v=VK8PYsdXNBk" target="_blank">video</a> |
+            <a href="http://commalab.org/papers/spasm" target="_blank">project page</a>
         </div>
       </div>
       
       <div class="pub-item">
-        <img src="https://placehold.co/120x120?text=Fig1" class="pub-img" alt="Publication thumbnail">
+        <img src="assets/vinekino.gif" class="pub-img" alt="Publication thumbnail">
         <div class="pub-text">
             <b>Parallel Simulation of Contact and Actuation for Soft Growing Robots</b>
             <br>
             Yitian Gao, <i>Lucas Chen</i>, Priyanka Bhovad, Sicheng Wang, Zachary Kingston, Laura H. Blumenschein
-            <br>
+            <br><br>
             SoRo 2026 (in review)
-            <!-- <br> -->
-            <a href="https://arxiv.org/abs/2501.17963" target="_blank">[paper]</a>
-            <a href="https://github.com/CoMMALab/ActVineSimPy" target="_blank">[github]</a>
+            <br>
+            <a href="https://arxiv.org/abs/2509.15180" target="_blank">paper</a> |
+            <a href="https://github.com/CoMMALab/ActVineSimPy" target="_blank">github</a>
         </div>
       </div>
       
       <div class="pub-item">
-        <img src="https://placehold.co/120x120?text=Fig1" class="pub-img" alt="Publication thumbnail">
+        <img src="assets/sim.png" class="pub-img" alt="Publication thumbnail">
         <div class="pub-text">
 
             <b>Physics-Grounded Differentiable Simulation for Soft Growing Robots</b>
             <br>
             <i>Lucas Chen</i>, Yitian Gao, Sicheng Wang, Francesco Fuentes, Laura H. Blumenschein, Zachary Kingston
-            <br>
+            <br><br>
             RoboSoft 2025
-            <!-- <br> -->
-            <a href="https://ieeexplore.ieee.org/document/11020809/" target="_blank">[paper]</a>
-            <a href="https://github.com/CoMMALab/DiffVineSimPy" target="_blank">[github]</a>
-            <a href="assets/Robosoft poster new-3.pdf" target="_blank">[poster]</a>
-            <a href="assets/robosoft slides.pptx" target="_blank">[slides]</a>
+            <br>
+            <a href="https://ieeexplore.ieee.org/document/11020809/" target="_blank">paper</a> |
+            <a href="https://github.com/CoMMALab/DiffVineSimPy" target="_blank">github</a> |
+            <a href="assets/Robosoft poster new-3.pdf" target="_blank">poster</a> |
+            <a href="assets/robosoft slides.pptx" target="_blank">slides</a>
         </div>
       </div>
       
       <div class="pub-item">
-        <img src="https://placehold.co/120x120?text=Fig2" class="pub-img" alt="Publication thumbnail">
+        <img src="assets/iros.png" class="pub-img" alt="Publication thumbnail">
         <div class="pub-text">
             <b>Efficient Q-Learning over Visit Frequency Maps for Multi-Agent Exploration of Unknown Environments</b>
             <br>
             <i>Lucas Chen</i>, Ashvin N. Iyer, Zixing Wang, Ahmed H. Qureshi
-            <br>
+            <br><br>
             IROS 2023
-            <!-- <br> -->
-            <a href="https://ieeexplore.ieee.org/document/10341899/" target="_blank">[paper]</a>
-            <a href="https://github.com/corallab-base/Integrated-Visit-Frequency-Maps" target="_blank">[github]</a>
-            <a href="assets/IROS Poster i-VFM.pdf" target="_blank">[poster]</a>
+            <br>
+            <a href="https://ieeexplore.ieee.org/document/10341899/" target="_blank">paper</a> |
+          <a href="https://github.com/corallab-base/Integrated-Visit-Frequency-Maps" target="_blank">github</a> |
+          <a href="assets/IROS Poster i-VFM.pdf" target="_blank">poster</a>
         </div>
       </div>
       
@@ -197,10 +212,10 @@
             <br>
             Compile stack machine operations from the Forth language to LLVM IR via static graph analysis
             <br>
-            <a href="https://github.com/Reschivon/movForth" target="_blank">[github]</a>
-            <a href="https://youtu.be/CgxwbeLWSZM?t=9963" target="_blank">[talk]</a>
+            <a href="https://github.com/Reschivon/movForth" target="_blank">github</a> |
+            <a href="https://youtu.be/CgxwbeLWSZM?t=9963" target="_blank">talk</a>
         </div>
-        <img src="https://placehold.co/120x120?text=Fig4" class="pub-img" alt="Project thumbnail">
+        <!-- <img src="https://placehold.co/120x120?text=Fig4" class="pub-img" alt="Project thumbnail"> -->
       </div>
       
       <div class="pub-item">
@@ -210,7 +225,7 @@
             CS 592 Reinforcement Learning - Generate diverse new trajectories by diffusing in task-space,
             even with obstacles and self-collisions.
             <br>
-            <a href="assets/Posta.pdf" target="_blank">[poster]</a>
+            <a href="assets/Posta.pdf" target="_blank">poster</a>
             
         </div>
         <img src="assets/trajs.jpg" class="pub-img" alt="Project thumbnail">
@@ -225,7 +240,7 @@
             <br>
             
         </div>
-        <img src="assets/manifold_smooth_vis.png" class="pub-img" alt="Project thumbnail">
+        <img src="assets/field.png" class="pub-img" alt="Project thumbnail">
       </div>
         
   </section>

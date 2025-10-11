@@ -7,11 +7,10 @@
   --blue: #539bfa;
   --dark-blue: #307ee4;
   --red: rgb(244, 87, 20);
-  /* --font-sans: 'Fira Sans', Arial, sans-serif;
-  --font-mono: 'Fira Mono', Arial, sans-serif; */
   --font-sans: 'IBM Plex Sans', Arial, sans-serif;
   --font-mono: 'IBM Plex Mono', Arial, sans-serif;
-}
+  /* --font-sans: 'Lato', Verdana, Helvetica, sans-serif; */
+} 
 
 /* ==== Reset and Body ==== */
 html, body {
@@ -21,11 +20,11 @@ html, body {
   color: var(--gray);
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 0.4cm;
+  font-size: 14px;
   scroll-behavior: smooth;
   scroll-padding-top: 4.6rem;
   
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -63,7 +62,7 @@ a:hover {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 60px;
   border-bottom: none;
 }
 .bio-image {
@@ -71,6 +70,7 @@ a:hover {
 }
 .bio-text {
   flex: 1;
+  text-align: justify;
 }
 
 .bio-text h1 {
@@ -132,21 +132,30 @@ h2 {
 }
 
 /* ==== Experience Section ==== */
-ul {
-  padding-left: 2.0rem;
-  list-style-type: "– ";
-}
-
 ul.exp-list{
   list-style: none;
-  padding-left: 1.5em;
-  margin-top: 0.2em;
+  padding-left: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.narrow {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 li.exp-item {
-  margin-bottom: 1.1em;
+  margin-bottom: 1.1rem;
   font-size: 1.2rem;
-  padding-left: 0.0em;
+}
+
+ul {
+  padding-left: 2.0rem;
+  margin-top: 0.1rem;
+  list-style-type: "– ";
+}
+li {
+  margin-top: 0.0rem;
 }
 
 b {
@@ -164,21 +173,30 @@ b {
   flex-direction: column;
   gap: 2.2rem;
   margin-top: 1.4rem;
+  margin-bottom: 3rem;
 }
 .pub-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.6rem;
+  gap: 3rem;
 }
 .pub-img {
-  width: 200px;
-  height: 120px;
+  width: 250px;
   object-fit: contain;
-  /* border-radius: 0.5rem; */
-  /* background: #161617; */
-  /* border: 2px solid var(--section-border); */
-  /* flex-shrink: 0; */
+  border: 3px solid white;
+  margin-top: auto;
+  margin-bottom: auto;
 }
+
+.pub-vid {
+  width: 200px;
+  object-fit: contain;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-left: 25px solid white;
+  border-right: 25px solid white;
+}
+
 .pub-text {
   flex: 1;
   display: inline;
@@ -194,7 +212,7 @@ b {
 }
 
 /* ==== Responsive ==== */
-@media (max-width: 800) {
+@media (max-width: 800px) {
   html {
     font-size: 0.35cm;
   }
@@ -225,6 +243,10 @@ b {
     max-width: 100%;
   }
   
+  .narrow {
+    max-width: 100%;
+  }
+  
   h1 {
     text-align: center;
   }
@@ -232,7 +254,7 @@ b {
     text-align: center;
   }
   
-  ul {
-    padding-left: 0rem;
+  ul.exp-list{
+    padding-left: 0.5rem;
   }
 }
