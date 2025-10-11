@@ -89,7 +89,7 @@ a:hover {
 .title-bar {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 101;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +97,23 @@ a:hover {
   padding: 1.0rem 0;
   background: var(--off-black);
   border-bottom: 2px solid transparent;/
+}
+
+.background {
+  content: '';
+  position: absolute;
+  top: 630px;
+  width: 1300px;
+  height: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-image: url('assets/fun.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 10000;
+  filter: invert(0.9);
 }
 
 .title-bar.stuck {
@@ -193,8 +210,8 @@ b {
   object-fit: contain;
   margin-top: auto;
   margin-bottom: auto;
-  border-left: 25px solid white;
-  border-right: 25px solid white;
+  border-left: 28px solid white;
+  border-right: 28px solid white;
 }
 
 .pub-text {
@@ -219,6 +236,9 @@ b {
   
   .title-bar {
     position: static;
+  }
+  .background {
+    display: none;
   }
   .navigation-links {
     flex-direction: column;
