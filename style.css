@@ -93,7 +93,7 @@ a:hover {
   
   
   height: 400px;
-  left: 70%;
+  left: 850px;
   transform: translateX(-50%);
   
   background-image: url('assets/fun2.png');
@@ -256,7 +256,7 @@ b {
 }
 
 /* ==== Responsive ==== */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   html {
     font-size: 0.35cm;
   }
@@ -265,6 +265,9 @@ b {
     position: static;
   }
   .background {
+    display: none;
+  }
+  #education::after {
     display: none;
   }
   .navigation-links {
