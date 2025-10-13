@@ -86,23 +86,26 @@ a:hover {
   font-size: 1.2rem;
 }
 
-#education::after {
+.background2 {
   content: '';
-  position: absolute;
-  top: 1780px;
-  width: 350px;
+  position: relative;
   
-  
-  height: 400px;
-  left: 80%;
+  top: 0rem;
+  left: 50%;
   transform: translateX(-50%);
+  
+  width: 490px;
+  height: 170px;
+  
+  margin-top: -170px;
+  margin-left: 300px;
   
   background-image: url('assets/fun2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
   z-index: 102;
-  pointer-events:none;
+  /* pointer-events:none; */
   filter: invert(0.9);
   
   transform: translateX(-50%) scaleX(-1);
@@ -131,12 +134,16 @@ a:hover {
 
 .background {
   content: '';
-  position: absolute;
-  top: 630px;
-  width: 1300px;
-  height: 900px;
+  position: relative;
+  top: 0rem;
   left: 50%;
   transform: translateX(-50%);
+  
+  width: 1300px;
+  height: 200px;
+  
+  margin-top: -70px;
+  margin-bottom: -90px;
   
   background-image: url('assets/fun.png');
   background-size: contain;
