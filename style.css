@@ -99,16 +99,12 @@ a:hover {
   width: 170px;
   height: 130px;
   
-  background-image: url('assets/epic.png');
+  background-image: url('assets/epic2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
   z-index: 102;
-  /* pointer-events:none; */
-  -webkit-filter: invert(90%);
-  filter: invert(90%);
-  
-  /* transform: translateX(-50%) scaleX(-1); */
+  pointer-events:none;
 }
 
 .background2 {
