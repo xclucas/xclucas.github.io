@@ -105,6 +105,8 @@ a:hover {
   background-position: center top;
   z-index: 102;
   pointer-events:none;
+  
+  filter: brightness(0.9);
 }
 
 .background2 {
