@@ -45,7 +45,7 @@
           I am also interested in how we can make proof-of-concept methods from literature reliable and explainable enough to deploy to commercial robots.
           <br><br> 
           
-          <div style="text-align: center;">
+          <div style="text-align: center; position: relative;">
             <a href="#" id="email-link" target="_blank">Email</a> &nbsp; | &nbsp;
             <a href="https://github.com/xclucas" target="_blank">Github</a> &nbsp; | &nbsp;
             <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">Linkedin</a>
@@ -282,14 +282,37 @@
       });
 
       const emailLink = document.getElementById('email-link');
-      if (emailLink) {
-        emailLink.addEventListener('click', function(event) {
-          event.preventDefault();
+      emailLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        const emailBoxId = 'email-box';
+        let emailBox = document.getElementById(emailBoxId);
+
+        if (emailBox) {
+          emailBox.remove();
+        } else {
           const user = 'chen4007';
           const domain = 'purdue.edu';
-          window.location.href = 'mailto:' + user + '@' + domain;
-        });
-      }
+          const email = user + '@' + domain;
+          
+          emailBox = document.createElement('div');
+          emailBox.id = emailBoxId;
+          emailBox.textContent = email;
+          
+          // Style the floating box
+          emailBox.style.position = 'absolute';
+          emailBox.style.left = (this.offsetLeft + this.offsetWidth - 50) + 'px';
+          emailBox.style.top = (this.offsetTop + (this.offsetHeight / 2) + 24) + 'px'; // Vertically centered
+          emailBox.style.lineHeight = '24px';
+          emailBox.style.border = '1px solid #ccc';
+          emailBox.style.borderRadius = '5px';
+          emailBox.style.padding = '1px 8px';
+          emailBox.style.fontFamily = "'IBM Plex Mono', monospace";
+          emailBox.style.zIndex = '100';
+
+          this.parentNode.appendChild(emailBox);
+        }
+      });
     });
   </script>
 
