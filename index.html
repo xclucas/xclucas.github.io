@@ -46,7 +46,7 @@
           <br><br> 
           
           <div style="text-align: center;">
-            <a href="mailto:chen4007@purdue.edu" target="_blank">Email</a> &nbsp; | &nbsp;
+            <a href="#" id="email-link" target="_blank">Email</a> &nbsp; | &nbsp;
             <a href="https://github.com/reschivon" target="_blank">Github</a> &nbsp; | &nbsp;
             <a href="https://www.linkedin.com/in/i-make-robots/" target="_blank">Linkedin</a>
           </div>
@@ -280,6 +280,16 @@
           const currentTop = el.getBoundingClientRect().top;
           el.classList.toggle("stuck", currentTop === stickyTop);
       });
+
+      const emailLink = document.getElementById('email-link');
+      if (emailLink) {
+        emailLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          const user = 'chen4007';
+          const domain = 'purdue.edu';
+          window.location.href = 'mailto:' + user + '@' + domain;
+        });
+      }
     });
   </script>
 
